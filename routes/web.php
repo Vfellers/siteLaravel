@@ -223,3 +223,62 @@ Route::get("/produto/{id}", [ProdutosController::class, "detail"]);
 //php artisan make:controller CadastroController --resource
 
 Route::resource("/cadastro", CadastroController::class);
+
+
+
+
+
+//==============================================BLADE=======================================================
+
+//Rotas para estudo do BLADE
+
+route::get("/blade/expressoes", function(){
+    $nome = "Victor";
+    return view("blade/expressoes", ["nome" => $nome]);
+});
+
+
+
+//Controle de decisao
+route::get("/blade/controle-decisao/{numero?}", function($numero=0){
+    return view("blade/controleDecisao", ["n" => $numero, "idade" => 30]);
+});
+
+
+//ROta do Switch
+route::get("/blade/switch/{numero?}", function($n = 0){
+    return view("blade/switch", ["numero" => $n]);
+});
+
+
+//ROTAS PARA LACOS DE REPETIÇÃO
+
+// FOR
+Route::get("/blade/lacos/for", function(){
+    $dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    return view("blade/lacos/for", ["dias" => $dias]);
+});
+
+
+//FOREACH
+Route::get("/blade/lacos/foreach", function(){
+    $familia = [
+        ["nome" => "Gabriel", "idade" => 28, "parentesco" => "Irmão"],
+        ["nome" => "Salete", "idade" => 54, "parentesco" => "Mãe"],
+        ["nome" => "Gilson", "idade" => 54, "parentesco" => "Pai"],
+        ["nome" => "Lala", "idade" => 23, "parentesco" => "Noiva"],
+        ["nome" => "Law", "idade" => 28, "parentesco" => "Cunhada"]
+    ];
+    return view("blade/lacos/foreach", ["familia" => $familia]);
+});
+
+
+//WHILE
+Route::view("/blade/lacos/while", "blade/lacos/while");
+
+
+
+//=======================BLOG===================================
+Route::get("/blog", function(){
+    return view("blog/home");
+});
