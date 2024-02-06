@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
-</head>
-<body>
+@extends('layout.blog')          {{-- Ao invés da barra aqui, usa-se ponto // layout/blog       @extends determina qual layout sera usado--}}
+@section("title", "Blog do Vito")                     {{-- Determina a injeção de conteudo --}}
 
-    <h1 class="text-lala">AAAAAAAAAAAAAAAAAA</h1>
-    <button class="btn btn-lala">Clique Nimim</button>
-    
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/app.js"></script>
-</body>
-</html>
+@section('content')
+    <h1>Blog do Vito é o melhor</h1>
+@endsection
