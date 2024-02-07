@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js',])              {{-- Isso veio do vite.config.js --}}
+
     {{-- @yield exibe o conteudo de uma determinada sessao --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <title>@yield("title")</title>
 </head>
 
@@ -21,11 +22,9 @@
         </div>
     </main>
 
+    
+    @include("layout.footer")
 
-    <footer>
 
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

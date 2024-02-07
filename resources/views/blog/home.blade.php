@@ -2,5 +2,5 @@
 @section("title", "Blog do Vito")                     {{-- Determina a injeção de conteudo --}}
 
 @section('content')
-    <h1>Blog do Vito é o melhor</h1>
+    <h1>ALASLAJDFKLAJDKLAJDLKADJ</h1>
 @endsection

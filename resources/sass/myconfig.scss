@@ -1,0 +1,17 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+$custom-theme : (
+    "orange": orange,
+    "chief": blue
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme);
+
+// .bg-green{
+//     background-color: rgb(0, 255, 34)!important;
+// }
