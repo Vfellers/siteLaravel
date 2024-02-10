@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
@@ -284,7 +285,8 @@ Route::get("/blog", function(){
 });
 
 
-Route::get("/blog/artigos", function(){
-    return view("blog/artigos");
-});
+// Route::get("/blog/artigos", function(){
+//     return view("blog/artigos");
+// });
 
+Route::resource("/blog/artigos", ArticlesController::Class);      //ArticlesCOntroller esta na pasta APP >> HTTP >> CONTROLLERS
